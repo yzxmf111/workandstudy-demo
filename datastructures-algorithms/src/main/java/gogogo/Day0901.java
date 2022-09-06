@@ -35,9 +35,10 @@ public class Day0901 {
             list.add(new ArrayList<>(path));
             return;
         }
+        //begin才能做到不重复
         for (int i = begin; i <= n; i++) {
             path.addLast(i); //这里不能是begin而是i，否则不能按照一定的顺序进行搜索
-            findRes( i + 1, n, k, path, list); //这里不能是begin+1而是i+1，否则不能按照一定的顺序进行搜索 从第二个数看起
+            findRes( i + 1, n, k, path, list); //这里不能是begin+1而是i+1，否则不能按照一定的顺序进行搜索 从第二个数看起 [2.2]
             //logger.info("list = {}; path = {}",list, path);
             path.removeLast();
         }
