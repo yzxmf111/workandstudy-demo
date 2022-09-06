@@ -1,6 +1,7 @@
 package gogogo;
 
-import cn.xiaotian.entity.TreeNode;
+
+import xiaotian.entity.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

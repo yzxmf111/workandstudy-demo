@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @author xiaotian
@@ -79,9 +80,10 @@ public class Day0830 {
             super.put(key, value);
         }
 
-
-
-
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+            return size() > capacity;
+        }
     }
 
 
