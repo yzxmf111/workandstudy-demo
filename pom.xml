@@ -12,6 +12,7 @@
     <modules>
         <module>datastructures-algorithms</module>
         <module>effective-java</module>
+        <module>design-partterns</module>
     </modules>
 
 
@@ -86,11 +87,11 @@
 
 
         <!-- 通用mapper逆向工具 -->
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>2.1.5</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>tk.mybatis</groupId>-->
+<!--            <artifactId>mapper-spring-boot-starter</artifactId>-->
+<!--            <version>2.1.5</version>-->
+<!--        </dependency>-->
 
 
         <!-- apache 工具类 -->

@@ -9,12 +9,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="effective-java" />
         <module name="datastructures-algorithms" />
+        <module name="designpartterns" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="design-partterns" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="datastructures-algorithms" options="-parameters" />
+      <module name="design-partterns" options="-parameters" />
+      <module name="designpartterns" options="-parameters" />
       <module name="effective-java" options="-parameters" />
     </option>
   </component>
