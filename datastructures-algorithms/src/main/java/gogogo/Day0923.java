@@ -86,7 +86,7 @@ public class Day0923 {
      * @param head
      * @return
      */
-    public ListNode detectCycle(ListNode head) {
+    public ListNode detectCycle2(ListNode head) {
         if (head == null) {
             return null;
         }
