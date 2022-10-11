@@ -1,4 +1,4 @@
-package gogogo.sort;
+package DataStructureAndAlgorithms.src.gogogo.sort;
 
 import java.util.Comparator;
 import java.util.TreeMap;

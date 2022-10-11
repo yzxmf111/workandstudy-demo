@@ -1,4 +1,4 @@
-package gogogo.sort;
+package DataStructureAndAlgorithms.src.gogogo.sort;
 
 public class CompareTest {
 

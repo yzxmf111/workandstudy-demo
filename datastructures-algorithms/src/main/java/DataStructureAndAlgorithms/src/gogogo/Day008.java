@@ -1,4 +1,6 @@
-package gogogo;
+package DataStructureAndAlgorithms.src.gogogo;
+
+import gogogo.ListNode;
 
 public class Day008 {
 

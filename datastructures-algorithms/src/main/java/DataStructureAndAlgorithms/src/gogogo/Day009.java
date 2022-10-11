@@ -1,4 +1,6 @@
-package gogogo;
+package DataStructureAndAlgorithms.src.gogogo;
+
+import gogogo.ListNode;
 
 import java.util.HashMap;
 import java.util.Map;

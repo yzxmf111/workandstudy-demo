@@ -1,4 +1,4 @@
-package gogogo;
+package DataStructureAndAlgorithms.src.gogogo;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

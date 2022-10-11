@@ -1,4 +1,4 @@
-package gogogo;
+package DataStructureAndAlgorithms.src.gogogo;
 
 public class Day003 {
 
