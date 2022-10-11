@@ -21,7 +21,7 @@ tmp/**/*
 *~.nib
 forseti-gateway.properties
 local.properties
-.classpath
+.path
 .settings/
 .loadpath
 api/app.output_IS_UNDEFINED/

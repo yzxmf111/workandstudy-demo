@@ -1,0 +1,4 @@
+package April;
+
+  interface InterfaceTest {
+}
