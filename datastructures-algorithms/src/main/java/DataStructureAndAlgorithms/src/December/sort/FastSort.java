@@ -27,7 +27,10 @@ public class FastSort {
 
     //通过排定一个元素，并且在排定这个元素的同时，对整个数组也做了一次划分。这个过程叫做切分。
     public void fastSort(int[] arr, int left, int right) {
-        if (arr.length < 7) insertSort(arr, left, right);
+        if (arr.length < 7) {
+            insertSort(arr, left, right);
+            return;
+        }
 
         //排好一个元素的位置, 递归的向左,向右处理事情---这个元素就是切分点
         int partition = partition(arr, left, right);

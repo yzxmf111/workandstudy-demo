@@ -135,11 +135,12 @@ public class SortAlgorithms {
     }
 
     private static void fast(int[] nums, int left, int right) {
-//        if (right - left <= FIX_LENGTH) {
-////            小区间 插入排序 性能接近 O（n）---------------------
-//            insertSortTwo(nums, left, right);
-//        }
-        if (right<=left) return;
+        if (right - left <= FIX_LENGTH) {
+//            小区间 插入排序 性能接近 O（n）---------------------
+            insertSortTwo(nums, left, right);
+            return;
+        }
+        //if (right<=left) return;
         //减治的思想
         int fixIndex = fixElement(nums, left, right);
         fast(nums, left, fixIndex - 1);
@@ -147,7 +148,7 @@ public class SortAlgorithms {
     }
 
     private static int fixElement(int[] nums, int left, int right) {
-        int index = random.nextInt(right - left + 1);
+        int index = random.nextInt(right - left + 1) + left;
         swap(nums, index, left);
         int swapIndex = left;
         int firstRandomNum = nums[swapIndex];
@@ -169,11 +170,10 @@ public class SortAlgorithms {
 
 
     private static void insertSortTwo(int[] nums, int left, int right) {
-        int size = nums.length - 1;
-        for (int i = 1; i <= size; i++) {
+        for (int i = left + 1; i <= right; i++) {
             int j = i;
-            int temp = nums[j];
-            while (j > 0 && nums[j - 1] > temp) {
+            int temp = nums[i];
+            while (j > left && nums[j - 1] > temp) {
                 nums[j] = nums[j - 1];
                 j--;
             }
@@ -182,20 +182,20 @@ public class SortAlgorithms {
     }
 
     public static void main(String[] args) {
-//        Random random = new Random();
-//        int[] nums = new int[10];
-//        for (int i = 0; i < 10; i++) {
-//            nums[i] = random.nextInt(10);
-//        }
+        Random random = new Random();
+        int[] nums = new int[1000000];
+        for (int i = 0; i < 1000000; i++) {
+            nums[i] = random.nextInt(1000000);
+        }
         long start = System.currentTimeMillis();
 //        int[] ints = SortAlgorithms.bubbleSort(nums);
 //        int[] ints = SortAlgorithms.insertSort(nums);
 //        int[] ints = SortAlgorithms.selectSort(nums);
-//        int[] ints = SortAlgorithms.mergeSort(nums);
+        int[] ints = SortAlgorithms.mergeSort(nums);
 //        int[] ints = SortAlgorithms.fastSort(nums);
+        //int[] nums = {8,6,4,5,9,1 ,12,34,5451,213,1,22,2,1,22};
+        //int[] ints = SortAlgorithms.fastSort(nums);
         long end = System.currentTimeMillis();
-        int[] nums = {8,6,4,5,9,1,11,2};
-        int[] ints = SortAlgorithms.fastSort(nums);
         String s = Arrays.toString(ints);
         System.out.println(s + "---花费时间:" + (end - start) + "ms");
 
