@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="designpartterns" />
         <module name="effective-java" />
-        <module name="basic-knowknowledge" />
-        <module name="design-partterns" />
         <module name="datastructures-algorithms" />
+        <module name="designpartterns" />
+        <module name="design-partterns" />
+        <module name="basic-knowknowledge" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,4 +1,4 @@
-package xiaotian.EffectiveJava;
+package xiaotian.effectivejava.chaptertwo;
 
 /**
  * @author xiaotian
