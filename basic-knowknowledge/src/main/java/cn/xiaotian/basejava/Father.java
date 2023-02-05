@@ -2,18 +2,19 @@ package cn.xiaotian.basejava;
 
 public class Father {
 
-    private String name;
+    public static String staticField = "father静态变量";
 
-    public Father(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
+    static {
+        System.out.println("father静态语句块");
     }
 
-    public void setName(String name) {
-        this.name = name;
+    private String field = "father实例变量";
+
+    {
+        System.out.println("father普通语句块");
     }
 
-    private void yell(){}
+    public Father() {
+    }
+
 }
