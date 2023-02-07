@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="designpartterns" />
         <module name="effective-java" />
-        <module name="basic-knowknowledge" />
-        <module name="design-partterns" />
+        <module name="jvm_deeper" />
         <module name="datastructures-algorithms" />
+        <module name="designpartterns" />
+        <module name="design-partterns" />
+        <module name="basic-knowknowledge" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,6 +23,7 @@
       <module name="design-partterns" options="-parameters" />
       <module name="designpartterns" options="-parameters" />
       <module name="effective-java" options="-parameters" />
+      <module name="jvm_deeper" options="-parameters" />
     </option>
   </component>
 </project>

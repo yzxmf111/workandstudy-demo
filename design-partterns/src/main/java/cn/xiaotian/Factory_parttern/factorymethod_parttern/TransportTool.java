@@ -1,9 +1,4 @@
-package cn.xiaotian.factorymethod_parttern;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
+package cn.xiaotian.Factory_parttern.factorymethod_parttern;
 
 /**
  * @author xiaotian

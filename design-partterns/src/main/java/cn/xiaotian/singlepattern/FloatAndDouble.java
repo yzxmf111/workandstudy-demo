@@ -1,4 +1,4 @@
-package cn.xiaotian.basejava;
+package cn.xiaotian.singlepattern;
 
 public class FloatAndDouble {
 

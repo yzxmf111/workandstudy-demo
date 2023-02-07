@@ -7,6 +7,10 @@ public class stringtest {
         String a ="abc";
         System.out.println(a == s);
 
+        int f = 8;
+        f = 8>> 1;
+        System.out.println(f);
+
     }
 
 

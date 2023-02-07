@@ -1,4 +1,4 @@
-package cn.xiaotian.factorymethod_parttern;
+package cn.xiaotian.Factory_parttern.factorymethod_parttern;
 
 import org.springframework.stereotype.Component;
 

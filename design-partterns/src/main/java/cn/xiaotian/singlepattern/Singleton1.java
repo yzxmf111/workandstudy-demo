@@ -1,6 +1,4 @@
-package cn.xiaotian.basejava;
-
-import groovy.lang.Singleton;
+package cn.xiaotian.singlepattern;
 
 public class Singleton1 {
 

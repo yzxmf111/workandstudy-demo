@@ -1,6 +1,6 @@
-package cn.xiaotian.basejava;
+package cn.xiaotian.singlepattern;
 
-public enum Singleton {
+public enum Singleton2 {
     INSTANCE;
 
     private String objName;
@@ -19,10 +19,10 @@ public enum Singleton {
     public static void main(String[] args) {
 
         // 单例测试
-        Singleton firstSingleton = Singleton.INSTANCE;
+        Singleton2 firstSingleton = Singleton2.INSTANCE;
         firstSingleton.setObjName("firstName");
         System.out.println(firstSingleton.getObjName());
-        Singleton secondSingleton = Singleton.INSTANCE;
+        Singleton2 secondSingleton = Singleton2.INSTANCE;
         secondSingleton.setObjName("secondName");
         System.out.println(firstSingleton.getObjName());
         System.out.println(secondSingleton.getObjName());
@@ -30,8 +30,8 @@ public enum Singleton {
 
         // 反射获取实例测试
         try {
-            Singleton[] enumConstants = Singleton.class.getEnumConstants();
-            for (Singleton enumConstant : enumConstants) {
+            Singleton2[] enumConstants = Singleton2.class.getEnumConstants();
+            for (Singleton2 enumConstant : enumConstants) {
                 System.out.println(enumConstant.getObjName());
             }
         } catch (Exception e) {

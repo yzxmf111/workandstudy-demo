@@ -1,4 +1,4 @@
-package cn.xiaotian.factorymethod_parttern;
+package cn.xiaotian.Factory_parttern.factorymethod_parttern;
 
 /**
  * @author xiaotian
