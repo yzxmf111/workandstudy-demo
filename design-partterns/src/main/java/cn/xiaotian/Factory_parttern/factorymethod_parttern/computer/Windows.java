@@ -10,4 +10,8 @@ import cn.xiaotian.Factory_parttern.factorymethod_parttern.computer.Computer;
 public class Windows extends Computer {
 
 
+    @Override
+    public void showDetails() {
+
+    }
 }
