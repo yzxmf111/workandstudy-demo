@@ -16,5 +16,4 @@ public class FilterOne implements Filter {
         return true;
     }
 
-
 }
