@@ -10,4 +10,8 @@ import cn.xiaotian.Factory_parttern.factorymethod_parttern.computer.Computer;
 public class Windows extends Computer {
 
 
+    @Override
+    public void showDetails(Computer computer) {
+        System.out.println("电脑型号:"+computer.getType() + ",name:" + computer.getName());
+    }
 }

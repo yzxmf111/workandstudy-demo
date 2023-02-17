@@ -13,5 +13,5 @@ public abstract class Computer {
     private String type;
     private String name;
 
-    public abstract void showDetails();
+    public abstract void showDetails(Computer computer);
 }

@@ -5,5 +5,12 @@ package cn.xiaotian.Factory_parttern.factorymethod_parttern.computer;
  * @description
  * @date 2023-02-09 14:47
  */
-public class ComputerFactory {
+public abstract class ComputerFactory {
+
+    public abstract Computer buyComputer();
+
+    public void selectShop() {
+        Computer computer = buyComputer();
+        computer.showDetails(computer);
+    }
 }

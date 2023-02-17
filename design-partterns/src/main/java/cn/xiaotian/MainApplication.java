@@ -1,5 +1,6 @@
 package cn.xiaotian;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ import org.springframework.context.ApplicationContextAware;
  * @description
  * @date 2022-09-16 17:42
  */
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class MainApplication implements ApplicationContextAware {
 
 

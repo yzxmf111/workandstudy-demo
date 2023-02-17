@@ -1,6 +1,9 @@
 package cn.xiaotian;
 
+import cn.xiaotian.Factory_parttern.factorymethod_parttern.Transport;
 import cn.xiaotian.Factory_parttern.factorymethod_parttern.TransportTool;
+import cn.xiaotian.Factory_parttern.factorymethod_parttern.TransportUtils;
+import cn.xiaotian.Factory_parttern.factorymethod_parttern.computer.WindowsFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,13 +20,21 @@ import javax.annotation.Resource;
 @SpringBootTest(classes = MainApplication.class)
 public class FactoryMethodTest {
 
-    @Resource
+    @Resource(name = "car")
     private TransportTool transportTool;
     
     @Test
     public void testFactoryMethod() {
         //Transport t = transportTool.createTransportTool("Car");
         //t.deliver();
-
+        Transport car = TransportUtils.getTransportTool("Car");
+        car.deliver();
     }
+
+    @Test
+    public void testFactoryMethod2() {
+        WindowsFactory windowsFactory = new WindowsFactory();
+        windowsFactory.selectShop();
+    }
+
 }

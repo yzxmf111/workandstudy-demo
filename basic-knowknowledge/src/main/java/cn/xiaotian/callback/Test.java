@@ -1,11 +1,6 @@
 package cn.xiaotian.callback;
 
-import ch.qos.logback.core.util.ExecutorServiceUtil;
-
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Future;
 
 /**
  * @author xiaotian

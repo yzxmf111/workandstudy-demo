@@ -94,14 +94,14 @@ public class Day1114 {
     //两两交换链表的节点
     //1-2-3-4 and 1-2-3-4-5
     //递归 or 迭代 --双指针
-    public ListNode swapPairs(ListNode head) {
-        if (head == null || head.next == null) return head;
-        ListNode first = head, second = head;
-        while (second != null /*&& second.next != null && second.next.next != null*/) {
-
-        }
-        swapPairs(head);
-    }
+    //public ListNode swapPairs(ListNode head) {
+    //    if (head == null || head.next == null) return head;
+    //    ListNode first = head, second = head;
+    //    while (second != null /*&& second.next != null && second.next.next != null*/) {
+    //
+    //    }
+    //     swapPairs(head);
+    //}
 
     public static void main(String[] args) {
 

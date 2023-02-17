@@ -9,7 +9,7 @@ import javax.annotation.PostConstruct;
  * @description
  * @date 2022-10-31 17:16
  */
-@Component
+@Component("car")
 public class Car extends TransportTool implements Transport{
 
     @PostConstruct
