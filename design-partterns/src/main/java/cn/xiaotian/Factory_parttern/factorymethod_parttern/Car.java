@@ -23,6 +23,21 @@ public class Car extends TransportTool implements Transport{
     }
 
     @Override
+    public void feifei() {
+
+    }
+
+    @Override
+    public void func1() {
+
+    }
+
+    @Override
+    public void func2() {
+
+    }
+
+    @Override
     public Transport createTransportTool() {
         return new Car();
     }

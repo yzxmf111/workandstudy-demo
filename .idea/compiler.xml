@@ -7,17 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="effective-java" />
         <module name="jvm_deeper" />
+        <module name="basic-knowknowledge" />
+        <module name="effective-java" />
         <module name="datastructures-algorithms" />
         <module name="designpartterns" />
         <module name="design-partterns" />
-        <module name="basic-knowknowledge" />
+        <module name="Microservices" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Microservices" options="-parameters" />
       <module name="basic-knowknowledge" options="-parameters" />
       <module name="datastructures-algorithms" options="-parameters" />
       <module name="design-partterns" options="-parameters" />
