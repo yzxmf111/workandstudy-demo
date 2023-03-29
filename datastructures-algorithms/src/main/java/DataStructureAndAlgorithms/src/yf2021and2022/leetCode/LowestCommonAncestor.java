@@ -9,10 +9,9 @@ package DataStructureAndAlgorithms.src.yf2021and2022.leetCode;
 
 public class LowestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        //递归的终止条件
-        if (root == null || root == p || root == q) return root;
-        //向下递归 & 当前层的处理逻辑
-        //4                                  2
+        if (root == null || root == p || root == q) {
+            return root;
+        }
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         if (left == null) return right;
@@ -29,4 +28,14 @@ public class LowestCommonAncestor {
             val = x;
         }
     }
+
+    ////递归的终止条件
+    //if (root == null || root == p || root == q) return root;
+    ////向下递归 & 当前层的处理逻辑
+    ////4                                  2
+    //TreeNode left = lowestCommonAncestor(root.left, p, q);
+    //TreeNode right = lowestCommonAncestor(root.right, p, q);
+    //if (left == null) return right;
+    //if (right == null) return left;
+    //return root;
 }
