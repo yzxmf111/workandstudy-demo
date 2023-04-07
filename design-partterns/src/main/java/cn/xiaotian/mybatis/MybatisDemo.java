@@ -37,10 +37,10 @@ public class MybatisDemo {
         SqlSession session = sqlSessionFactory.openSession();
         //3、通过sqlsession执行数据库操作
         //可以通过 SqlSession 实例来直接执行已映射的 SQL 语句：
-        Blog blog = (Blog)session.selectOne("cn.xiaotian.mybatis.BlogMapper.selectBlog", 101);
+        //Blog blog = (Blog)session.selectOne("cn.xiaotian.mybatis.BlogMapper.selectBlog", 101);
         //更常用的方式是先获取Mapper(映射)，然后再执行SQL语句：
-        //BlogMapper mapper = session.getMapper(BlogMapper.class);
-        //Blog blog = mapper.selectBlog(101);
+        BlogMapper mapper = session.getMapper(BlogMapper.class);   //获取的是一个代理对象，执行方法实际上执行的是代理对象的增强逻辑
+        Blog blog = mapper.selectBlog(101);
         //4、调用session.commit()提交事务：如果是更新、删除语句，我们还需要提交一下事务。
         //5、调用session.close()关闭会话
         session.close();
