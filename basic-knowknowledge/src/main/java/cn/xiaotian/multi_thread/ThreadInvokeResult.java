@@ -35,7 +35,7 @@ public class ThreadInvokeResult {
     //                return aIds.stream().distinct().collect(Collectors.toList());
     //            }, TestThreadExecutor.getInstance());
     //
-    //    return unionClassIds
+    //    return unionClassIds11121
     //            .exceptionally(exception -> {
     //                System.out.println("出异常了");
     //                return List.of();
