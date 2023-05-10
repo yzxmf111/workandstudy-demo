@@ -1,6 +1,6 @@
 package cn.xiaotian.multi_thread;
 
-/**111
+/**
  * @author xiaotian
  * @description 线程执行结果的获取:
  *                              Future；
