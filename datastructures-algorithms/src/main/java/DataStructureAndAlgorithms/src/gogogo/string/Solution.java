@@ -41,11 +41,32 @@ public class Solution {
     }
 
 
+    public int lengthOfLongestSubstring(String s) {
+        //1、双指针 2、dp？
+        int i = 0, j = 0, max = 0;
+        Map<String, Integer> map = new HashMap<>();
+        char[] chars = s.toCharArray();
+        for(char c : chars) {
+            if (map.containsKey(c)) {
+                j = Math.max(j, map.get(c) + 1);
+            }
+            max = Math.max(max, i - j + 1);
+            i++;
+        }
+        return max;
+
+    }
+
     public static void main(String[] args) {
         //String[] s = {"eat", "tea", "tan", "ate", "nat", "bat"};
         //List<List<String>> lists = new Solution().groupAnagrams(s);
         //System.out.println(lists);
-
+        //Solution solution = new Solution();
+        //solution.lengthOfLongestSubstring("abc")
+        List<String> a = null;
+        for (String s : a) {
+            System.out.println("sd");
+        }
 
 
     }
