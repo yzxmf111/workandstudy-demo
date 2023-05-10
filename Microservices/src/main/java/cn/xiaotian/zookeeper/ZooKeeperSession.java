@@ -43,7 +43,7 @@ public class ZooKeeperSession {
      * @param productId
      */
     public Boolean acquireDistributedLock(Long productId) {
-        String path = "/product-lock-" + productId;
+        String path = "/product-cn.xiaotian.lock-" + productId;
 
         try {
             zookeeper.create(path, "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
@@ -74,10 +74,10 @@ public class ZooKeeperSession {
      * @param productId
      */
     public void releaseDistributedLock(Long productId) {
-        String path = "/product-lock-" + productId;
+        String path = "/product-cn.xiaotian.lock-" + productId;
         try {
             zookeeper.delete(path, -1);
-            System.out.println("release the lock for product[id=" + productId + "]......");
+            System.out.println("release the cn.xiaotian.lock for product[id=" + productId + "]......");
         } catch (Exception e) {
             e.printStackTrace();
         }
