@@ -8,11 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jvm_deeper" />
+        <module name="basic-knowknowledge" />
+        <module name="effective-java" />
+        <module name="datastructures-algorithms" />
         <module name="designpartterns" />
         <module name="design-partterns" />
-        <module name="basic-knowknowledge" />
-        <module name="datastructures-algorithms" />
-        <module name="effective-java" />
         <module name="Microservices" />
       </profile>
     </annotationProcessing>

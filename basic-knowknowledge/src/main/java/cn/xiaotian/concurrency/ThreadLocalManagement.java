@@ -8,7 +8,6 @@ package cn.xiaotian.concurrency;
 public class ThreadLocalManagement {
 
     private static ThreadLocal<User> userThreadLocal = new ThreadLocal<>();
-//    private static ThreadLocal<User> userThreadLocal = new ThreadLocal<>();
 
     public User getUser() {
         User user = userThreadLocal.get();
