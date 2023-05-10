@@ -16,6 +16,7 @@
         <module>basic-knowknowledge</module>
         <module>jvm_deeper</module>
         <module>Microservices</module>
+        <module>drools</module>
     </modules>
 
 
@@ -250,6 +251,13 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.32</version>
+        </dependency>
+
+        <!--zookeeper-->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.5.7</version>
         </dependency>
     </dependencies>
 

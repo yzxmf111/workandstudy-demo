@@ -11,6 +11,7 @@
         <module name="basic-knowknowledge" />
         <module name="effective-java" />
         <module name="datastructures-algorithms" />
+        <module name="drools" />
         <module name="designpartterns" />
         <module name="design-partterns" />
         <module name="Microservices" />
@@ -24,6 +25,7 @@
       <module name="datastructures-algorithms" options="-parameters" />
       <module name="design-partterns" options="-parameters" />
       <module name="designpartterns" options="-parameters" />
+      <module name="drools" options="-parameters" />
       <module name="effective-java" options="-parameters" />
       <module name="jvm_deeper" options="-parameters" />
     </option>

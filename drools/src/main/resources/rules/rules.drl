@@ -1,0 +1,20 @@
+package com.example.rules
+
+import com.example.Logistics
+
+rule "Calculate Freight"
+when
+$logistics : Logistics()
+$destination : String( this == $logistics.getDestination() )
+$freight : Double() from $logistics.getWeight() * $logistics.getDistance() * $logistics.getRate()
+then
+$logistics.setFreight( $freight );
+end
+
+rule "Calculate Route"
+when
+$logistics : Logistics()
+$route : String() from $logistics.getDestination() + " -> " + $logistics.getOrigin()
+then
+$logistics.setRoute( $route );
+end
