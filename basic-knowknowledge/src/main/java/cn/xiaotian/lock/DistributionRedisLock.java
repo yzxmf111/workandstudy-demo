@@ -7,7 +7,7 @@
 //
 ///**
 // * @author xiaotian
-// * @description  redis实现的分布式锁自动续期222
+// * @description  redis实现的分布式锁自动续期2
 // * @date 2023-04-24 15:10
 // */
 //public class DistributionRedisLock {
