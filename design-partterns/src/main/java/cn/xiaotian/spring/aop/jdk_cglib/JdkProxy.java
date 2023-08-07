@@ -8,7 +8,7 @@ package cn.xiaotian.spring.aop.jdk_cglib;
 public class JdkProxy {
 
     /**
-     * Spring 的 AOP 是通过动态代理来实现的，动态代理主要有两种方式 JDK 动态代理和 Cglib 动态代理，这两种动态代理的使用和原理有些不同。
+     * Spring 的 AOP 是通过动态代理来实现的，动态代理主要有两种实现方式 JDK 动态代理和 Cglib 动态代理，这两种动态代理的使用和原理有些不同。
      *
      * JDK 动态代理:
      *   Interface：对于 JDK 动态代理，目标类需要实现一个 Interface。
