@@ -1,0 +1,58 @@
+{
+  "code":200,
+  "msg":"",
+  "success":true,
+  "data":[
+    {
+      "productId":"",
+      "productName":"",
+      "scheduleId":2222,
+      "storeIds":[123,321,232],
+      "planPromotionActivity":{
+        "planActivityId":"",
+        "activityType":"",
+        "price":10.0,
+        "planActivityStartDate":"2023-01-01 12:21:21",
+        "planActivityEndDate":"2023-01-01 12:21:21",
+        "activityRule":"文本"
+
+      },
+      "deliverActivityType":"、",
+      "realPromotionActivity":{
+        "activityId":"",
+        "activityName":"",
+        "activityType":"",
+        "activityPurpose":"",
+        "activityMode":"",
+        "price":"",
+        "activityStartDate":"",
+        "activityEndDate":""
+      },
+      "deliverActivityInfo":[
+        {
+          "activityType":"",
+          "activityId":"",
+          "activityName":"",
+          "activityStartDate":"",
+          "activityEndDate":"",
+          "floorName":"",
+          "floorNum":3,
+          "floorType":"",
+          "resourceInfo":[{
+            "resourceType":"首页弹窗",
+            "startDate":"",
+            "endDate":""
+          },
+            {
+              "resourceType":"首页弹窗",
+              "startDate":"",
+              "endDate":""
+            }]
+        }
+      ],
+      "operatorForcastNum":1221,
+      "algoForecastNum":211,
+      "purchaserForecast":2112
+    }
+  ]
+}
