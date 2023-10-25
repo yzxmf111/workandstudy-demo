@@ -2,6 +2,9 @@ package cn.xiaotian.basejava;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Objects;
 
 /**
  * @Author yifan.tian
@@ -10,8 +13,22 @@ import lombok.Data;
  **/
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Person {
 
     private Integer age;
     private String name;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(age, person.age) && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, name);
+    }
 }

@@ -1,12 +1,11 @@
 package cn.xiaotian.basejava;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ListTest {
@@ -35,16 +34,16 @@ public class ListTest {
 //            System.out.println("orderNum=" + order.getOrderNum() + ",payTime=" + order.getPayTime());
 //        }
 
-        List<String> list = new ArrayList<>();
-        list.add("2023-06-15");
-      list.forEach(
-              a -> {
-                  if ( a.compareTo("2023-06-09") > 0) {
-                      System.out.println(a);
-                  }
-
-              }
-      );
+//        List<String> list = new ArrayList<>();
+//        list.add("2023-06-15");
+//      list.forEach(
+//              a -> {
+//                  if ( a.compareTo("2023-06-09") > 0) {
+//                      System.out.println(a);
+//                  }
+//
+//              }
+//      );
 
 //
 //        String a = null;
@@ -55,5 +54,65 @@ public class ListTest {
 //        calSuggestDataDTO.setStockAtTransport(Objects.isNull(null) ? null: -1);
 //        System.out.println(calSuggestDataDTO);
 
+//        int i = 010;
+//        int a = 010 & i;
+//        System.out.println(a);
+//        List<Person> list = new ArrayList<>();
+//        Person one = new Person();
+//        Student student = new Student(1, "lisi");
+//        assemble(one.getName(), student);
+//        Person two = new Person(2, "2");
+//        Person three = new Person(3, "3");
+//        Map<String, Person> map = new HashMap<>();
+//        map.put("1", one);
+//        map.put("2", two);
+//        Person person = map.get("1");
+//        list.add(person);
+//        person = map.get("2");
+//        list.add(person);
+//        System.out.println(list);
+//        System.out.println(one);
+//        LocalDate now = LocalDate.now();
+//        LocalDateTime now2 = LocalDateTime.now();
+//        System.out.println(now);
+//        System.out.println(now2);
+//
+//        List<Long> a = new ArrayList<>();
+//        List<Long> b = new ArrayList<>();
+//        a.add(1L);
+//        b.add(1L);
+//        a.add(2L);
+//        b.add(2L);
+//        if (a.equals(b)) {
+//            System.out.println("sad");
+//        }
+        List<List<Person>> list = new ArrayList<>();
+        List<Person> list1 = new ArrayList<>();
+        List<Person> list2 = new ArrayList<>();
+        Person a = new Person(1, "");
+        Person b = new Person(1, "");
+        Person c = new Person(1, "");
+        Person d = new Person(1, "");
+        list1.add(a);
+        list1.add(b);
+        list1.add(c);
+        list1.add(d);
+        list2.add(a);
+        list2.add(b);
+        list2.add(c);
+        list2.add(d);
+        list.add(list1);
+        list.add(list2);
+        List<Person> collect = list.stream().filter(Objects::nonNull).flatMap(Collection::stream).distinct()
+                .collect(Collectors.toList());
+        System.out.println(collect);
+
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime localDateTime = now.withMinute(0).withSecond(0).withNano(0);
+        System.out.println(localDateTime);
+    }
+
+    private static void assemble(String name, Student student) {
+        name = student.getName();
     }
 }

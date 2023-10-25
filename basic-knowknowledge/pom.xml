@@ -12,4 +12,14 @@
     <artifactId>basic-knowknowledge</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.8</version> <!-- 版本号根据实际情况进行更新 -->
+        </dependency>
+
+    </dependencies>
+
+
 </project>
