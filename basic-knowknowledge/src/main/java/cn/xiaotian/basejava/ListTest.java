@@ -86,31 +86,33 @@ public class ListTest {
 //        if (a.equals(b)) {
 //            System.out.println("sad");
 //        }
-        List<List<Person>> list = new ArrayList<>();
-        List<Person> list1 = new ArrayList<>();
-        List<Person> list2 = new ArrayList<>();
-        Person a = new Person(1, "");
-        Person b = new Person(1, "");
-        Person c = new Person(1, "");
-        Person d = new Person(1, "");
-        list1.add(a);
-        list1.add(b);
-        list1.add(c);
-        list1.add(d);
-        list2.add(a);
-        list2.add(b);
-        list2.add(c);
-        list2.add(d);
-        list.add(list1);
-        list.add(list2);
-        List<Person> collect = list.stream().filter(Objects::nonNull).flatMap(Collection::stream).distinct()
-                .collect(Collectors.toList());
-        System.out.println(collect);
-
-        LocalDateTime now = LocalDateTime.now();
-        LocalDateTime localDateTime = now.withMinute(0).withSecond(0).withNano(0);
-        System.out.println(localDateTime);
+        List<Person> list = new ArrayList<>();
+        Person a = new Person(1, "zhangsan");
+        Person b = new Person(2, "lisi");
+        Person c = new Person(1, "zhangsan");
+        Person d = new Person(13, "13");
+        list.add(a);
+        list.add(b);
+        list.add(c);
+        list.add(d);
+        List<Person> people = removeDupProductIdAndScheduleId(list);
+        System.out.println(people);
     }
+
+
+    private static List<Person> removeDupProductIdAndScheduleId(List<Person> activityWarehouseForecasts) {
+        List<Person> distinctForecasts = activityWarehouseForecasts.stream()
+                .collect(Collectors.toMap(
+                        forecast -> forecast.getAge() + "-" + forecast.getName(),
+                        forecast -> forecast,
+                        (existing, replacement) -> existing
+                ))
+                .values()
+                .stream()
+                .collect(Collectors.toList());
+        return distinctForecasts;
+    }
+
 
     private static void assemble(String name, Student student) {
         name = student.getName();

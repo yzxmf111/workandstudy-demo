@@ -1,4 +1,4 @@
-package cn.xiaotian.multi_thread;
+package cn.xiaotian.concurrency.multi_thread;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -51,5 +51,11 @@ public class BigDecimalTest {
 			System.out.println(11111);
 		}
 
-	}
+		BigDecimal one = new BigDecimal("1");
+		if (one.compareTo(null) == 0) {
+			System.out.println("ppp");
+		}
+		}
+
 }
+

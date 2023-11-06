@@ -1,4 +1,4 @@
-package cn.xiaotian.multi_thread;
+package cn.xiaotian.concurrency.multi_thread;
 
 /**111
  * @author xiaotian

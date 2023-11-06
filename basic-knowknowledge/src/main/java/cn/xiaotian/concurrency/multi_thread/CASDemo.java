@@ -1,7 +1,6 @@
-package cn.xiaotian.multi_thread;
+package cn.xiaotian.concurrency.multi_thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicStampedReference;
 
 /**
  * @author xiaotian

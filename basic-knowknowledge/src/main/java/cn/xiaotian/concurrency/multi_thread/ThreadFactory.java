@@ -1,12 +1,4 @@
-package cn.xiaotian.multi_thread;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
+package cn.xiaotian.concurrency.multi_thread;
 
 /**
  * @author xiaotian
