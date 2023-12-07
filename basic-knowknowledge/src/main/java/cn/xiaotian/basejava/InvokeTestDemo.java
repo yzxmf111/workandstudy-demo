@@ -10,10 +10,10 @@ import java.util.List;
  **/
 public class InvokeTestDemo {
     public static void main(String[] args) {
-        Person person = new Person(10, "zhangsan");
-        String name = person.getName();
-        name = "lisi";
-        System.out.println(person);
+//        Person person = new Person(10, "zhangsan");
+//        String name = person.getName();
+//        name = "lisi";
+//        System.out.println(person);
     }
 
 }

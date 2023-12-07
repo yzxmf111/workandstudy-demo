@@ -87,14 +87,14 @@ public class ListTest {
 //            System.out.println("sad");
 //        }
         List<Person> list = new ArrayList<>();
-        Person a = new Person(1, "zhangsan");
-        Person b = new Person(2, "lisi");
-        Person c = new Person(1, "zhangsan");
-        Person d = new Person(13, "13");
-        list.add(a);
-        list.add(b);
-        list.add(c);
-        list.add(d);
+//        Person a = new Person(1, "zhangsan");
+//        Person b = new Person(2, "lisi");
+//        Person c = new Person(1, "zhangsan");
+//        Person d = new Person(13, "13");
+//        list.add(a);
+//        list.add(b);
+//        list.add(c);
+//        list.add(d);
         List<Person> people = removeDupProductIdAndScheduleId(list);
         System.out.println(people);
     }

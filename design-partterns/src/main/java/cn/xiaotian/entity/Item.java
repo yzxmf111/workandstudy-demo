@@ -15,4 +15,5 @@ public class Item {
     private String type;
     private String money;
     private Integer level;
+    private Float weight;
 }

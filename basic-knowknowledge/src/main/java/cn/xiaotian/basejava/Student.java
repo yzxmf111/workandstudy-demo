@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Student extends Person{
 
-    public Student(int age, String name) {
-        super(age, name);
-    }
+//    public Student(int age, String name) {
+//        super(age, name);
+//    }
 }
