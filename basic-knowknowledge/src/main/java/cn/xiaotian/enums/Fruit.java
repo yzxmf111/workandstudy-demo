@@ -49,6 +49,9 @@ package cn.xiaotian.enums;
  * @Date 2024/1/12 11:01
  **/
 public enum Fruit {
+	/**
+	 * 数据枚举
+	 */
 	APPLE(1),ORANGE(2),BANANA(3);
 	int code;
 
