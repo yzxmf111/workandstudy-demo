@@ -1,9 +1,6 @@
 package cn.xiaotian.basejava;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class A {
     static {
@@ -21,7 +18,12 @@ public class A {
         Deque<A> queue = new LinkedList<>();
         Deque<A> deque = new ArrayDeque<>();
         queue.offerFirst(null);
-        deque.offerFirst(null);
+        //deque.offerFirst(null);
+
+
+        List<String> strings = Arrays.asList("1", "2");
+        strings.add("3");
+        System.out.println(strings);
 
     }
 }
