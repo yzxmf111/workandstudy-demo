@@ -1,7 +1,6 @@
 package cn.xiaotian.http;
 
-import cn.xiaotian.concurrency.ThreadLocalManagement;
-import cn.xiaotian.multi_thread.AsyncUtil;
+import cn.xiaotian.concurrency.multi_thread.AsyncUtil;
 import lombok.SneakyThrows;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.config.RequestConfig;
@@ -16,8 +15,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * @author xiaotian

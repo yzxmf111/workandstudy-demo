@@ -1,5 +1,6 @@
 package cn.xiaotian.callback;
 
+import java.math.BigDecimal;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -37,6 +38,8 @@ public class Test {
         //    }
         //});
         //System.out.println(future2.join());
-
+        Float a =null;
+        Float b  = a * 1;
+        System.out.println(b);
     }
 }

@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jvm_deeper" />
         <module name="basic-knowknowledge" />
+        <module name="domain" />
         <module name="effective-java" />
         <module name="datastructures-algorithms" />
         <module name="drools" />
@@ -25,6 +26,7 @@
       <module name="datastructures-algorithms" options="-parameters" />
       <module name="design-partterns" options="-parameters" />
       <module name="designpartterns" options="-parameters" />
+      <module name="domain" options="-parameters" />
       <module name="drools" options="-parameters" />
       <module name="effective-java" options="-parameters" />
       <module name="jvm_deeper" options="-parameters" />
