@@ -30,11 +30,11 @@ public class D240334 {
 //	}
 
 
-	public boolean isPalindrome(ListNode head) {
-		if (head == null || head.next == null) return true;
-		ListNode reverseListNode = reverse(head);
-
-	}
+//	public boolean isPalindrome(ListNode head) {
+//		if (head == null || head.next == null) return true;
+//		ListNode reverseListNode = reverse(head);
+//
+//	}
 
 	public static void main(String[] args) {
 		ListNode one = new ListNode(1);
@@ -46,8 +46,8 @@ public class D240334 {
 		two.next = three;
 		three.next = four;
 		four.next = five;
-		boolean palindrome = new D240334().isPalindrome(one);
-		System.out.println(palindrome);
+//		boolean palindrome = new D240334().isPalindrome(one);
+//		System.out.println(palindrome);
 	}
 
 	public ListNode reverse(ListNode head){
