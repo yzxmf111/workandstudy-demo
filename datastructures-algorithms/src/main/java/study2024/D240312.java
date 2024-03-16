@@ -1,5 +1,6 @@
 package study2024;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
@@ -23,6 +24,7 @@ public class D240312 {
 		char[] chars = s.toCharArray();
 		while (i < chars.length) {
 			if (map.containsKey(chars[i])) {
+				//key: abba 会有取 j = j 的情况
 				j = Math.max(j, map.get(chars[i]) + 1);
 			}
 			map.put(chars[i], i);
@@ -35,7 +37,7 @@ public class D240312 {
 	public int climbStairs(int n) {
 		int[] dp = new int[n + 1];
 		dp[0] = 1;//1个台阶的方法
-		dp[1] = 2;//2个台阶的方法
+		dp[1] = 1;//2个台阶的方法
 		for (int i = 2; i <= n; i++) {
 			dp[i] = dp[i - 1] + dp[i - 2];
 		}
@@ -57,5 +59,37 @@ public class D240312 {
 			}
 		}
 		return dp[m - 1][n - 1];
+	}
+	//o(n^2) o(n)
+	public int uniquePathsBest(int m, int n) {
+		int[] cur = new int[n];
+		Arrays.fill(cur, 1);
+		for (int i = 1; i < m; i++) {
+			for (int j = 1; j < n; j++) {
+				cur[j] = cur[j - 1] + cur[j];
+			}
+		}
+		return cur[n - 1];
+	}
+
+
+	public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+		int n = obstacleGrid.length, m = obstacleGrid[0].length;
+		int[] f = new int[m];
+
+		f[0] = obstacleGrid[0][0] == 0 ? 1 : 0;
+		for (int i = 0; i < n; ++i) {
+			for (int j = 0; j < m; ++j) {
+				if (obstacleGrid[i][j] == 1) {
+					f[j] = 0;
+					continue;
+				}
+				if (j - 1 >= 0 && obstacleGrid[i][j - 1] == 0) {
+					f[j] += f[j - 1];
+				}
+			}
+		}
+
+		return f[m - 1];
 	}
 }
