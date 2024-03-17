@@ -49,7 +49,7 @@ public class CustomHashMap<K, V> {
 		buckets[index].add(new Entry<>(key, value));
 		size++;
 	}
-
+	//这里没考虑扩容
 	public V get(K key) {
 		int index = getIndex(key);
 		if (buckets[index] != null) {
