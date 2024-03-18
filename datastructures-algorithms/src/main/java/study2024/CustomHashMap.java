@@ -6,7 +6,9 @@ package study2024;
  * @Date 2024/2/27 15:06
  **/
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 class Entry<K, V> {
 	K key;
@@ -80,6 +82,13 @@ public class CustomHashMap<K, V> {
 		System.out.println(map.get("one"));    // Output: 1
 		System.out.println(map.get("two"));    // Output: 2
 		System.out.println(map.get("four"));   // Output: null
+
+
+		Set<Integer> set = new HashSet<>();
+		set.add(1);
+		set.add(1);
+		set.add(1);
+		System.out.println(set);
 	}
 }
 
