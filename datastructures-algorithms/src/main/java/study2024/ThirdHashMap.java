@@ -41,6 +41,7 @@ public class ThirdHashMap<K, V> {
     }
 
 
+
     public int getIndex(K key) {
         int h;
         //如果想简单，直接key.hashCode() % table.length
@@ -58,6 +59,7 @@ public class ThirdHashMap<K, V> {
     private void putVal(K key, V value, Node<K, V>[] table) {
         int index = getIndex(key);
         Node<K, V> oldNode = table[index];
+        Node<K, V> photoNode = oldNode;
         if (oldNode == null) {
             table[index] = new Node<>(key, value);
             size++;
@@ -73,7 +75,8 @@ public class ThirdHashMap<K, V> {
                 }
                 oldNode = oldNode.next;
             }
-            table[index] = new Node<>(key, value, oldNode);
+            //头插法
+            table[index] = new Node<>(key, value, photoNode);
             size++;
         }
 
