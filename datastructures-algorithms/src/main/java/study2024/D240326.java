@@ -9,7 +9,7 @@ import java.util.Queue;
 
 /**
  * @Author yifan.tian
- * @Description 二叉树的层序遍历 组合
+ * @Description 二叉树的层序遍历
  * @Date 2024/3/26 13:53
  **/
 public class D240326 {

@@ -30,11 +30,15 @@ public class Combination {
 
 	public static void main(String[] args) {
 		int[] a = {1,3,5,4,1,7};
+		int[] b = {2,3,6,7};
 		final int i = new Combination().runeReserve(a);
 		System.out.println(i);
 
 		final List<List<Integer>> combine = new Combination().combine(4, 2);
 		System.out.println(combine);
+
+		final List<List<Integer>> lists = new Combination().combinationSum(b, 7);
+		System.out.println(lists);
 	}
 
 	/**
@@ -44,26 +48,52 @@ public class Combination {
 	 *
 	 */
 	public List<List<Integer>> combine(int n, int k) {
-		List<List<Integer>> list = new ArrayList<>();
-		Deque<Integer> path = new ArrayDeque<>();
-		findRes(1, n, k, path, list);
-		return list;
+		List<List<Integer>> res = new ArrayList<>();
+		Deque<Integer> deque = new ArrayDeque<>();
+		findRes(1, n, k, res, deque);
+		return res;
 	}
 
-	private void findRes(int begin, int n, int k, Deque<Integer> path, List<List<Integer>> list) {
-		if (path.size() == k) {
-			list.add(new ArrayList<>(path));
+	private void findRes(int begin, int n, int k, List<List<Integer>> res, Deque<Integer> deque) {
+		if (deque.size() == k) {
+			res.add(new ArrayList<>(deque));
 			return;
 		}
-		//begin才能做到不重复。是管理的同一层
 		for (int i = begin; i <= n; i++) {
-			path.addLast(i); //这里不能是begin而是i，否则不能按照一定的顺序进行搜索
-			//i管理的是上下层
-			//这里不能是begin+1而是i+1，否则不能按照一定的顺序进行搜索 从第二个数看起 [2.2]
-			//[2,2]i是2,begin是1  [3,2]i是3,begin是1
-			findRes( i + 1, n, k, path, list);
-			logger.info("list = {}; path = {}",list, path);
-			path.removeLast();
+			deque.addLast(i);
+			findRes(i + 1, n, k, res, deque);
+			// System.out.println("deque = " + deque);
+			deque.removeLast();
 		}
 	}
+
+	public List<List<Integer>> combinationSum(int[] candidates, int target) {
+		List<List<Integer>> res = new ArrayList<>();
+		Deque<Integer> deque = new ArrayDeque<>();
+		int sum = 0;
+		dfs( 0, candidates, res, sum, target, deque);
+		return res;
+	}
+
+	private void dfs(int begin, int[] candidates,
+	                 List<List<Integer>> res, int sum , int target, Deque<Integer> deque) {
+		if (sum == target) {
+			res.add(new ArrayList<>(deque));
+			return;
+		}
+		if (sum > target) {
+			return;
+		}
+		for (int i = begin; i < candidates.length; i++) {
+			deque.addLast(candidates[i]);
+			dfs(i, candidates, res, sum + candidates[i], target, deque);
+			System.out.println("deque = " + deque+", sum = " + sum);
+			deque.removeLast();
+		}
+	}
+
+
+
+
+
 }
