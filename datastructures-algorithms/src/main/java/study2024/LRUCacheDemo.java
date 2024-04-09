@@ -1,4 +1,4 @@
-package DataStructureAndAlgorithms.src.gogogo;
+package study2024;
 
 import java.util.HashMap;
 import java.util.Map;
