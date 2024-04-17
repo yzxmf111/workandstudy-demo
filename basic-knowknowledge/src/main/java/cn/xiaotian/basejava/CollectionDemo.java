@@ -18,10 +18,7 @@ public class CollectionDemo {
 //        permissions.add("1");
 //        permissions.add("1");
 //        System.out.println(permissions);
-       final List<String> permissions = ImmutableList.of("1","2");
-        permissions.add("1");
-        permissions.add("1");
-        permissions.add("1");
+       final List<String> permissions = ImmutableList.of();
         System.out.println(permissions);
     }
 
