@@ -1,6 +1,7 @@
 package study2024;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @Author yifan.tian
@@ -16,8 +17,11 @@ public class D240422 {
 	public static void main(String[] args) {
 		D240422 d240422 = new D240422();
 		// int i = d240422.climbStairsNotBest(3);
-		int[][] nums = {{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
-		int i = d240422.uniquePathsWithObstacles(nums);
+		// int[][] nums = {{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
+		// int i = d240422.uniquePathsWithObstacles(nums);
+		int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+		int i = d240422.maxSubArray(nums);
+		System.out.println(i);
 	}
 
 	public int climbStairs(int n) {
@@ -92,4 +96,52 @@ public class D240422 {
 		}
 		return dp[m - 1][n - 1];
 	}
+
+	public int minimumTotal(List<List<Integer>> triangle) {
+		int m = triangle.size();
+		int n = triangle.get(m - 1).size();
+		int[][] dp = new int[m+1][n+1];
+		int sum = 0;
+		for (int i = m - 1; i >= 0; i--) {
+			for (int j = 0; j <= i; j++) {
+				dp[i][j] = triangle.get(i).get(j) + Math.min(dp[i+1][j], dp[i+1][j + 1]);
+			}
+		}
+		return dp[0][0];
+	}
+
+
+	public int minimumTotalBest(List<List<Integer>> triangle) {
+		int m = triangle.size();
+		int n = triangle.get(m - 1).size();
+		int[] dp = new int[n+1];
+		int sum = 0;
+		for (int i = m - 1; i >= 0; i--) {
+			for (int j = 0; j <= i; j++) {
+				dp[j] = triangle.get(i).get(j) + Math.min(dp[j], dp[j + 1]);
+			}
+		}
+		return dp[0];
+	}
+
+	public int maxSubArray2(int[] nums) {
+		int[] dp = new int[nums.length];
+		dp[0] = nums[0];
+		int max = Integer.MIN_VALUE;
+		for (int i = 1; i < nums.length; i++) {
+			dp[i] = dp[i - 1] > 0 ? nums[i] + dp[i - 1] : nums[i];
+			max = Math.max(max, dp[i]);
+		}
+		return max;
+	}
+	public int maxSubArray(int[] nums) {
+		int max = nums[0];
+		for (int i = 1; i < nums.length; i++) {
+			nums[i] = nums[i - 1] > 0 ? nums[i] + nums[i - 1] : nums[i];
+			max = Math.max(max, nums[i]);
+		}
+		return max;
+	}
+
+
 }
