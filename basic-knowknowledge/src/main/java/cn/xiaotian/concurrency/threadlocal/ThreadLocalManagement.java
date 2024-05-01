@@ -1,4 +1,6 @@
-package cn.xiaotian.concurrency;
+package cn.xiaotian.concurrency.threadlocal;
+
+import cn.xiaotian.concurrency.User;
 
 /**
  * @author xiaotian
