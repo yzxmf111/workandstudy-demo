@@ -1,7 +1,6 @@
 package study2024;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Author: yzxmf
@@ -48,16 +47,8 @@ public class D240430 {
         root.left = right;
         root.right = left;
         return root;
-import gogogo.ListNode;
+    }
 
-import java.util.*;
-
-/**
- * @author xiaotian
- * @description 字符串去重并且保持顺序
- * @date 2024-04-20 19:51
- */
-public class D240430 {
 
     public String removeDup(String input) {
         char[] chars = input.toCharArray();
@@ -80,7 +71,7 @@ public class D240430 {
         String res = d240430.removeDup(s);
         System.out.println(res);
 
-        int[] nums = {100,4,200,1,3,2};
+        int[] nums = {100, 4, 200, 1, 3, 2};
         int i = d240430.longestConsecutive(nums);
         System.out.println(i);
     }
@@ -125,7 +116,4 @@ public class D240430 {
         return max;
     }
 
-    public ListNode mergeKLists(ListNode[] lists) {
-
-    }
 }
