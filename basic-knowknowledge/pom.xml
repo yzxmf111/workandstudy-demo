@@ -19,6 +19,12 @@
             <version>1.8</version> <!-- 版本号根据实际情况进行更新 -->
         </dependency>
 
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.13.6</version>
+        </dependency>
+
     </dependencies>
 
 
