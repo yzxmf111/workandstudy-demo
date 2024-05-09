@@ -59,7 +59,7 @@ public class LRUCacheDemo {
     public void put(int key, int value) {
         Node node = cache.get(key);
         if (node == null) {
-            //新增节点，移到头部；如果达到容量的话，删除链表最老的节点，cache也要删除
+            //新增节点，如果达到容量的话，链表最老的节点，cache也要删除
             Node newNode = new Node(key, value);
             cache.put(key, newNode);
             addToHead(newNode);
@@ -96,8 +96,8 @@ public class LRUCacheDemo {
     private void deleteCurNode(Node node) {
         node.pre.next = node.next;
         node.next.pre = node.pre;
-        node.pre = null;//会被GC
-        node.next = null;//会被GC
+        node.pre = null;
+        node.next = null;
     }
 
     private void moveToHead(Node node) {
