@@ -2,10 +2,7 @@ package study2024;
 
 import gogogo.ListNode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Author: yxxmf
@@ -73,5 +70,34 @@ public class D240414 {
             head = head.next;
         }
         return null;
+    }
+
+
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        if (root == null) {
+            return Collections.emptyList();
+        }
+        List<List<Integer>> res = new ArrayList<>();
+        Deque<TreeNode> deque = new LinkedList<>();
+        deque.addLast(root);
+        while (deque.size() > 0) {
+            int size = deque.size();
+            List<Integer> subList = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode treeNode = deque.removeFirst();
+                subList.add(treeNode.val);
+                if (treeNode.right != null) {
+                    deque.addLast(treeNode.right);
+                }
+                if (treeNode.left != null) {
+                    deque.addLast(treeNode.left);
+                }
+            }
+            if (res.size() % 2 != 0) {
+                Collections.reverse(subList);
+            }
+            res.add(subList);
+        }
+        return res;
     }
 }
