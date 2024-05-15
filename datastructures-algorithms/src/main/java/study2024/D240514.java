@@ -125,13 +125,16 @@ public class D240514 {
 		}
 		ListNode oddNode = head;
 		ListNode evenNode = head.next;
+		ListNode evenStart = evenNode;
 		while (evenNode != null && evenNode.next != null) {
 			oddNode.next = evenNode.next;
 			oddNode = oddNode.next;
 			evenNode.next = oddNode.next;
 			evenNode = evenNode.next;
 		}
-		oddNode.next = evenNode;
+		oddNode.next = evenStart;
 		return head;
 	}
+
+
 }
