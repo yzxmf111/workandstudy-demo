@@ -25,6 +25,7 @@
       <module name="basic-knowknowledge" options="-parameters" />
       <module name="datastructures-algorithms" options="-parameters" />
       <module name="design-partterns" options="-parameters" />
+      <module name="domain" options="-parameters" />
       <module name="drools" options="-parameters" />
       <module name="effective-java" options="-parameters" />
       <module name="jvm_deeper" options="-parameters" />
