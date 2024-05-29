@@ -61,19 +61,19 @@ public class D240528 {
 		}
 	}
 
-	public static void main(String[] args) {
-		D240528 d240528 = new D240528();
-		ListNode one = new ListNode(1);
-		ListNode two = new ListNode(2);
-		ListNode three = new ListNode(3);
-		ListNode four = new ListNode(4);
-		one.next = two;
-		two.next = three;
-		three.next = four;
-		// ListNode listNode = d240528.sortList(one);
-		// System.out.println(listNode);
-		d240528.reorderList(one);
-	}
+	// public static void main(String[] args) {
+	// 	D240528 d240528 = new D240528();
+	// 	ListNode one = new ListNode(1);
+	// 	ListNode two = new ListNode(2);
+	// 	ListNode three = new ListNode(3);
+	// 	ListNode four = new ListNode(4);
+	// 	one.next = two;
+	// 	two.next = three;
+	// 	three.next = four;
+	// 	// ListNode listNode = d240528.sortList(one);
+	// 	// System.out.println(listNode);
+	// 	d240528.reorderList(one);
+	// }
 
 	/**
 	 * 输入: head = [1,2,3,4]
@@ -101,5 +101,88 @@ public class D240528 {
 				pre = pre.next;
 			}
 		}
+	}
+
+	public int findMax(int[] nums) {
+		int left = 0, len = nums.length - 1, right = len, mid;
+
+		while (left <= right) {
+			mid = (left + right) / 2;
+			if (mid != len && nums[mid] < nums[mid + 1]) {
+				left = mid + 1;
+			} else {
+				right = mid - 1;
+			}
+		}
+		return nums[left];
+
+	}
+
+
+
+	public static void main(String[] args) {
+		D240528 d240528 = new D240528();
+		// ListNode one = new ListNode(1);
+		// ListNode two = new ListNode(2);
+		// ListNode three = new ListNode(3);
+		// ListNode four = new ListNode(4);
+		// one.next = two;
+		// two.next = three;
+		// three.next = four;
+		// // ListNode listNode = d240528.sortList(one);
+		// // System.out.println(listNode);
+		// d240528.reorderList(one);
+		int[] nums = {1,2,3,4,5,6,7,8,5,4,1};
+		int max = d240528.findMax(nums);
+	}
+
+	public void reorderList2(ListNode head) {
+		//找到中点
+		if (head == null || head.next == null) {
+			return;
+		}
+		ListNode mid = findMidNode(head);
+		//后半段翻转
+		ListNode after = reverse(mid);
+		//合并(前后只差1，直接合并)
+		merge2(head, after);
+	}
+
+	private void merge2(ListNode one, ListNode two) {
+		while (one != null && two != null) {
+			ListNode tmpOne = one.next;
+			ListNode tmpTwo = two.next;
+			one.next = two;
+			one = tmpOne;
+			two.next = one;
+			two = tmpTwo;
+		}
+
+	}
+
+	private ListNode reverse(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+		ListNode pre = null;
+		ListNode cur = head;
+		while (cur != null) {
+			ListNode tmp = cur.next;
+			cur.next = pre;
+			pre = cur;
+			cur = tmp;
+		}
+		return pre;
+	}
+
+	private ListNode findMidNode(ListNode head) {
+		ListNode fast = head, slow = head, mid;
+		while (fast != null && fast.next != null && fast.next.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
+		}
+		mid = slow.next;
+		slow.next = null;
+		return mid;
 	}
 }
