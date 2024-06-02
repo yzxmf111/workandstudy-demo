@@ -11,13 +11,8 @@
 
     <modules>
         <module>datastructures-algorithms</module>
-        <module>effective-java</module>
         <module>design-partterns</module>
         <module>basic-knowknowledge</module>
-        <module>jvm_deeper</module>
-        <module>Microservices</module>
-        <module>drools</module>
-        <module>domain</module>
     </modules>
 
 
