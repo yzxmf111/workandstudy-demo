@@ -1,6 +1,5 @@
 package study2024;
 
-import xiaotian.entity.TreeNode;
 
 import java.util.*;
 

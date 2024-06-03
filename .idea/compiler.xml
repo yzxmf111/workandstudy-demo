@@ -10,7 +10,6 @@
         <module name="jvm_deeper" />
         <module name="basic-knowknowledge" />
         <module name="domain" />
-        <module name="effective-java" />
         <module name="datastructures-algorithms" />
         <module name="drools" />
         <module name="designpartterns" />
@@ -19,6 +18,9 @@
         <module name="Microservices" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="effective-java" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
