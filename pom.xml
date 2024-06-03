@@ -18,6 +18,7 @@
         <module>Microservices</module>
         <module>drools</module>
         <module>domain</module>
+        <module>micro-service</module>
     </modules>
 
 
