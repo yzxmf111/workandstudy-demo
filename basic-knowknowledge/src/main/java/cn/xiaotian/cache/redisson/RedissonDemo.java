@@ -57,7 +57,11 @@ public class RedissonDemo {
 // over 50 Redis based Java objects and services ...
 
         RLock lock = redisson.getLock("anyLock");
-// 尝试加锁，最多等待100秒，上锁以后10秒自动解锁
+//        RLock fairLock = redisson.getFairLock("yzxmf");
+//        fairLock.tryLock();
+//        fairLock.lock();
+
+        // 尝试加锁，最多等待100秒，上锁以后10秒自动解锁
         boolean res = lock.tryLock(100, 10, TimeUnit.SECONDS);
         if (res) {
             try {
